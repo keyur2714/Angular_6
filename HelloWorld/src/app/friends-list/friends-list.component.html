@@ -1,0 +1,32 @@
+<p>
+  {{names}} 
+</p>
+<ul>
+  <li *ngFor="let name of names">
+    {{name}}
+  </li>
+</ul>
+<h3>
+  {{person.name}} <br/>
+  {{person.city}}
+</h3>
+
+<hr/>
+
+<p>Person List</p>
+<div *ngFor="let p of personList">
+  <span>{{p.name}}</span>
+  <span>|</span>
+  <span>{{p.city}}</span>
+</div>
+<hr/>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+  </tr>
+  <tr *ngFor="let p of personList">
+    <td>{{p.name}}</td>
+    <td>{{p.city}}</td>
+  </tr>
+</table>

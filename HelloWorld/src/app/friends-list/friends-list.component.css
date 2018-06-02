@@ -1,0 +1,13 @@
+li{
+    color: powderblue;
+}
+table{
+    border-color: royalblue;
+}
+table, tr{
+    color: white;
+    background: olivedrab;
+}
+table, td, th{
+    border: 5px solid palevioletred;
+}
