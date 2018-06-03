@@ -1,0 +1,12 @@
+table th{
+    border: 5px solid palevioletred;
+}
+.highlight{
+    color: yellow;    
+}
+.odd{
+    background: grey;        
+}
+.even{
+    background: blueviolet;
+}

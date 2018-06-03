@@ -1,0 +1,21 @@
+<table [ngClass]="mytable">
+  <tr>
+    <td>Number 1: </td>
+    <td><input type=text #num1 /></td>
+  </tr>
+  <tr>
+    <td>Number 2: </td>
+    <td><input type=text #num2 (change)=checkValid(num1.value,num2.value)/></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button (click)="add(num1.value,num2.value)" [disabled]="flag">+</button>  
+      <button (click)="sub(num1.value,num2.value)" [disabled]="flag">-</button>
+      <button (click)="mul(num1.value,num2.value)" [disabled]="flag">*</button>
+      <button (click)="div(num1.value,num2.value)" [disabled]="flag">/</button>
+    </td>    
+  </tr>
+  <tr>
+    <td colspan="2">Result is: {{result}}</td>
+  </tr>
+</table>

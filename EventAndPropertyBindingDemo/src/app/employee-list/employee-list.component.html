@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Emp Name</th>
+  </tr>
+  <tr *ngFor="let empN of empNameList;let i=index" [class]="empN == 'keyur' ? 'highlight' : ''">
+    <td *ngIf="i % 2 == 0" [class]="'even'">
+      {{empN}} {{i}}
+    </td>
+    <td *ngIf="i % 2 != 0" [class]="'odd'">
+      {{empN}} {{i}}
+    </td>
+  </tr>
+</table>
