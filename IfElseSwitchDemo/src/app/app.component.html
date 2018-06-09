@@ -1,0 +1,47 @@
+<div class="container">
+<h1>{{title}}</h1>
+<div class="row">
+  <div class="col">
+    <label>Age</label>
+  </div>
+  <div class="col">
+    <input type=text class="form-control" [(ngModel)]="age" />
+  </div>  
+</div>
+<br />
+Age Value: {{age}}
+<br />
+<h2>Using Normal If Statement</h2>
+<div *ngIf="age >= 18">
+      <span [ngClass]="'myMessageStyle'">
+        You are Eligible for Vote.
+      </span>
+</div>
+<div *ngIf="age < 18">
+      <span [ngClass]="'myMessageStyle'">
+        You are Not Eligible for Vote.
+      </span>
+</div>    
+<hr/>
+<h2>Using If Then Else Approach</h2>
+<div *ngIf="age >=18;then ageIfBlock;else ageElseBlock"></div>    
+<ng-template #ageIfBlock>
+  <span class="alert alert-info">You are Eligible for Voting.</span>
+</ng-template>
+<ng-template #ageElseBlock>
+  <span class="alert alert-danger">You are Not Eligible for Voting.</span>
+</ng-template>
+<hr/>
+<input type=text class="form-control" [(ngModel)]="percentage" />
+<button class="btn-sm btn-success " (click)="calculateGrade()">Calculate Grade</button>
+<br/>
+Your Grade is: {{grade}}
+<h2>Using NgSwitch Approach</h2>
+<div [ngSwitch]="grade">
+  <span *ngSwitchCase="'Distinction'">A+</span>
+  <span *ngSwitchCase="'First'">A</span>
+  <span *ngSwitchCase="'Second'">B</span>
+  <span *ngSwitchCase="'PASS'">C</span>
+  <span *ngSwitchCase="'FAIL'">F</span>
+</div>
+</div>
