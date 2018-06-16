@@ -1,0 +1,13 @@
+<div class="container">
+  <!-- <table class="table stripped">
+    <tr>
+      <th>Dept Id</th>
+      <th>Dept Name</th>
+    </tr>
+    <tr *ngFor="let dept of deptList">
+      <td>{{dept.deptId}}</td>
+      <td>{{dept.deptName}}</td>
+    </tr>
+  </table> -->
+  <app-grid [dataList]="deptList" [headerColumnList]="headerColumnList" [columnList]="columnList"></app-grid>
+</div>

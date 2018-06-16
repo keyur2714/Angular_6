@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+
+<app-department></app-department>
+
+<hr/>
+
+<app-employee></app-employee>
+
+<hr/>
+<app-message></app-message>
+
+<app-message [msg]="successMessage" [color]="'red'">
+</app-message>
+
+<app-message [msg]="'Hello From App Component'">
+</app-message>
+
+<app-message [msg]="failureMessage">
+</app-message>
+
+<app-message *ngFor="let msg of customeMessageList" [msg]="msg" [color]="'blue'">
+</app-message>
