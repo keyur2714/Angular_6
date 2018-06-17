@@ -1,0 +1,6 @@
+<select name="country" class="form-control" [(ngModel)]="selectedCountry" (change)="getSelectedCountry()">  
+  <option *ngFor="let country of countryList" [ngValue]="country">    
+    {{country.description}}
+  </option>
+</select>
+{{selectedCountry | json}}
