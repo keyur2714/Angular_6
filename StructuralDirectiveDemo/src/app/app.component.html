@@ -1,0 +1,23 @@
+<h2>{{title}}</h2>
+
+<button (click)="toggleFlag()">Change Flag</button>
+
+<div *appMyIf="flag">
+  <b>You are Correct...!</b>
+</div>
+<ng-template [appMyIf]="!flag">
+   <div>
+      <b>Sorry But You are wrong...!</b>
+  </div>
+</ng-template> 
+
+
+<ul>
+    <li *appMyLoop="5">
+        Hello
+    </li>
+</ul>
+
+<ng-template [appMyLoop]="3">
+    <p>Hello Radhe Krishna...!</p>                
+</ng-template>
