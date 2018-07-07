@@ -1,0 +1,19 @@
+<p>
+  Employee List
+</p>
+<table border="5">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor="let emp of empList" (click)="currentEmployee(emp)" [class.selected]="selectedEmployee === emp">
+    <td>{{emp.empId}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.age}}</td>
+  </tr>
+</table>
+
+<p>
+  {{selectedEmployee.name}}
+</p>
