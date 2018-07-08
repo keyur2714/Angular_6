@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+<div class="container">  
+<form #f=ngForm (ngSubmit)="submit()">    
+    <div class="row form-group">
+      <div class="col-40">
+        <label>Name:<sup>*</sup></label>
+      </div>
+      <div class="col-60">
+        <input type=text class="form-control" name="name" ngModel required minlength="3" #name="ngModel" />
+      </div>
+      <div class="col-60">
+        <div *ngIf="name.errors">
+          <span *ngIf="name.touched && name.invalid && name.errors['required']">Name is Required</span>
+          <span *ngIf="name.touched && name.invalid && name.errors['minlength']">Name is min 3 Character</span>
+        </div>
+      </div>
+    </div>        
+    <div class="row form-group">
+      <div class="col">
+        <button type="submit" class="btn btn-info" [disabled]="f.invalid">Submit</button>
+      </div>
+    </div>
+</form>
+</div>
+<hr/>
+<app-inquiry></app-inquiry>

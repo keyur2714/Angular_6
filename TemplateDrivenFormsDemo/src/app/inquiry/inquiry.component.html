@@ -1,0 +1,53 @@
+<div class="container">
+   <form #f="ngForm" (ngSubmit)="save(f)">
+    <div class="row form-group">
+      <div class="col-3"><sup>*</sup>Id: </div>
+      <div class="col-9"><input type=number class="form-control" name="id" #id=ngModel [(ngModel)]="inquiry.id" required/></div>
+    </div>   
+    <div class="row form-group">
+      <div class="col-3"><sup>*</sup>Name: </div>
+      <div class="col-9"><input type=text class="form-control" name="name" #name=ngModel [(ngModel)]="inquiry.name" required minlength="3"/></div>
+    </div>   
+    <div class="row form-group">
+      <div class="col-3"><sup>*</sup>Email: </div>
+      <div class="col-9"><input type=text class="form-control" name="email" #name=ngModel [(ngModel)]="inquiry.email" email required /></div>
+    </div>   
+    <div class="row form-group">
+      <div class="col-3"><sup>*</sup>Mobile No: </div>
+      <div class="col-9"><input type=text class="form-control" name="mobileNo" #name=ngModel [(ngModel)]="inquiry.mobileNo" required /></div>
+    </div>   
+    <div class="row form-group">
+      <div class="col-3"><sup>*</sup>Course: </div>
+      <div class="col-9">
+        <select name="course" class="form-control" [(ngModel)]="inquiry.course">
+          <option value="ANGULAR" selected>Angular</option>
+          <option value="JAVA">Java</option>
+          <option value="BIGDATA">Big Data</option>
+        </select>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-3">
+        <label><sup>*</sup>Gender:</label>
+      </div>
+      <div class="col-9">        
+          <input type="radio" name="gender" value="M" [(ngModel)]="inquiry.gender">Male
+          <input type="radio" name="gender" value="F" [(ngModel)]="inquiry.gender">Female        
+      </div>
+    </div>      
+    <div class="row form-group">
+      <div class="row form-group">
+        <button type="submit" class="btn btn-success" [disabled]="f.invalid">Save</button>
+      </div>
+    </div>  
+   </form> 
+
+  <div *ngIf="isSubmitted">
+    {{inquiry.id}}    
+    {{inquiry.name}}    
+    {{inquiry.email}}    
+    {{inquiry.mobileNo}}    
+    {{inquiry.course}}    
+    {{inquiry.gender}}    
+  </div>
+</div>
