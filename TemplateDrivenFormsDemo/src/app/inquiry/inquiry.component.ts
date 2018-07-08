@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Inquiry } from './inquiry.model';
+import { Course } from './course.model';
 @Component({
   selector: 'app-inquiry',
   templateUrl: './inquiry.component.html',
@@ -8,13 +9,33 @@ import { Inquiry } from './inquiry.model';
 export class InquiryComponent implements OnInit {
 
   inquiry: Inquiry = new Inquiry();
+  courses = [
+    {
+      "id":1,
+      "name":"Angular",
+      "description":"UI Technology",
+      "fees": 12000
+    },
+    {
+      "id":2,
+      "name":"Java",
+      "description":"Multi Purpose",
+      "fees": 15000
+    },  
+    {
+      "id":3,
+      "name":"Big Data",
+      "description":"Data Analytics",
+      "fees": 20000
+    }
+  ];
   isSubmitted = false;
 
   constructor() { }
 
   ngOnInit() {
     this.inquiry.gender = "F";
-    this.inquiry.course = "ANGULAR";
+    this.inquiry.course = this.courses[0];
   }
 
   save(frm){

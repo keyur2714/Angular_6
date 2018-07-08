@@ -20,9 +20,9 @@
       <div class="col-3"><sup>*</sup>Course: </div>
       <div class="col-9">
         <select name="course" class="form-control" [(ngModel)]="inquiry.course">
-          <option value="ANGULAR" selected>Angular</option>
-          <option value="JAVA">Java</option>
-          <option value="BIGDATA">Big Data</option>
+          <option *ngFor="let course of courses" [ngValue]="course">
+             {{course.name}}
+          </option>          
         </select>
       </div>
     </div>
@@ -47,7 +47,7 @@
     {{inquiry.name}}    
     {{inquiry.email}}    
     {{inquiry.mobileNo}}    
-    {{inquiry.course}}    
+    {{inquiry.course | json}}    
     {{inquiry.gender}}    
   </div>
 </div>

@@ -1,3 +1,4 @@
+import { Course } from './course.model';
 export class Inquiry{
-    constructor(public id?:number,public name?:string,public mobileNo?:string,public email?:string,public course?:string,public gender?:string){}
+    constructor(public id?:number,public name?:string,public mobileNo?:string,public email?:string,public course?:Course,public gender?:string){}
 }
