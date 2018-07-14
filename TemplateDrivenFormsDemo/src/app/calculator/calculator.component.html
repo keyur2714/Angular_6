@@ -1,0 +1,28 @@
+<div class="container">
+  <div *ngIf="frm.invalid && frm.touched"><span>Invalid Form Input</span></div>
+  <form #frm="ngForm" (ngSubmit)="submit(frm)">
+    <div class="row">
+      <div class="col-md-2"><label>Number 1</label></div>
+      <div class="col-md-8"><input class="form-control" type=text name=num1 [(ngModel)]="n1" required #num1=ngModel minlength="2"/></div>
+      <div *ngIf="num1.errors">
+        <div class="col-md-2" *ngIf="num1.invalid && num1.touched && num1.errors['required']"><span>Number 1 is Mandatory</span></div>
+        <div class="col-md-2" *ngIf="num1.invalid && num1.touched && num1.errors['minlength']"><span>Number 1 is Min 2 Character</span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2"><label>Number 2</label></div>
+      <div class="col-md-8"><input class="form-control" type=text name=num2 [(ngModel)]="n2" required #num2=ngModel minlength="2"/></div>
+      <div *ngIf="num2.errors">
+        <div class="col-md-2" *ngIf="num2.invalid && num2.touched && num2.errors['required']"><span>Number 2 is Mandatory</span></div>
+        <div class="col-md-2" *ngIf="num2.invalid && num2.touched && num2.errors['minlength']"><span>Number 2 is Min 2 Character</span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"><button type="submit" class="btn btn-success" [disabled]="frm.invalid">+</button></div>      
+    </div>
+  </form>
+  <div class="row" *ngIf="result > 0">
+    Result Is: {{n1}} + {{n2}} = {{result}}
+
+  </div>
+</div>

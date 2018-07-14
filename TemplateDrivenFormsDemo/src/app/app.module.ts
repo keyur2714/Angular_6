@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { InquiryComponent } from './inquiry/inquiry.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InquiryComponent
+    InquiryComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
