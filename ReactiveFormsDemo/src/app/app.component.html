@@ -1,0 +1,33 @@
+<div class="container">
+<h1>{{title}}</h1>
+  <form [formGroup]="calculatorForm" (ngSubmit)="calculate()">
+      <div class="row">
+        <div class="col-md-2"><label>Enter Num1:</label></div>
+        <div class="col-md-6"><input class="form-control" type=text formControlName="num1" name="num1" /></div>
+        <div div class="col-md-4" *ngIf="calculatorForm.get('num1').errors">
+          <span *ngIf="calculatorForm.get('num1').touched && calculatorForm.get('num1').invalid && calculatorForm.get('num1').errors['required']">Num1 is Required</span>
+          <span *ngIf="calculatorForm.get('num1').touched && calculatorForm.get('num1').invalid && calculatorForm.get('num1').errors['minlength']">Num1 Min Length is 2</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"><label>Enter Num2:</label></div>
+        <div class="col-md-9"><input class="form-control" type=text formControlName="num2" name="num2" /></div>
+        <div div class="col-md-4" *ngIf="calculatorForm.get('num2').errors">
+          <span *ngIf="calculatorForm.get('num2').touched && calculatorForm.get('num2').invalid && calculatorForm.get('num2').errors['required']">Num2 is Required</span>
+          <span *ngIf="calculatorForm.get('num2').touched && calculatorForm.get('num2').invalid && calculatorForm.get('num2').errors['minlength']">Num2 Min Length is 2</span>
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-md-3">  
+         </div>
+         <div class="col-md-9">
+           <button class="btn btn-info" type="submit" [disabled]="calculatorForm.invalid" >+</button>
+           <button class="btn btn-default" type="reset" [disabled]="calculatorForm.invalid" (click)="resetForm()">+</button>           
+         </div> 
+      </div>
+  </form>
+  <div class="row">
+      Result is : {{result}}
+  </div>
+  
+</div>
