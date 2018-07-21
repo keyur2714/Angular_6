@@ -3,10 +3,12 @@ import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { PersonEntryComponent } from './person-entry/person-entry.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersonEntryComponent
   ],
   imports: [
     BrowserModule,
