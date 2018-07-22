@@ -1,0 +1,128 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CaseStudy",
+		"_postman_id": "468285e7-0bc8-2137-7ee0-76a888f04de2",
+		"description": "Case Study APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAccessToken",
+			"request": {
+				"url": "https://simulationapi.ur-nl.com/oauth/token.json",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "4874eafd0f7a240625e59b2b123a142a669923d5b0d31ae8743f6780a95187f5",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "908f6aee4d4cb27782ba55ae0c814bf43419f3220d696206212a29fe3a05cd88",
+							"type": "text"
+						},
+						{
+							"key": "auth_token",
+							"value": "azd4jXWWLagyb9KzgfDJ",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "GetAccessToken"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current User",
+			"request": {
+				"url": "https://simulationapi.ur-nl.com/users/current.json",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer e4b8b20f40006a30e45d79510a0400bd3eb2a44fece7b81e846dc8be35bd5a1c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get Current User"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Case Study",
+			"request": {
+				"url": {
+					"raw": "https://simulationapi.ur-nl.com/case_study/companies/58cba141ba169e0eab2657c9/company_case_studies/595c859eba169ec47e4f20d4/user_company_case_studies/595ce021ba169edb9c733e90?include[company_case_study][include]=questions",
+					"protocol": "https",
+					"host": [
+						"simulationapi",
+						"ur-nl",
+						"com"
+					],
+					"path": [
+						"case_study",
+						"companies",
+						"58cba141ba169e0eab2657c9",
+						"company_case_studies",
+						"595c859eba169ec47e4f20d4",
+						"user_company_case_studies",
+						"595ce021ba169edb9c733e90"
+					],
+					"query": [
+						{
+							"key": "include[company_case_study][include]",
+							"value": "questions",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 34ff83941711410e4024ca153ba25a06044021d42273c41c526866161f610557",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get Case Study"
+			},
+			"response": []
+		}
+	]
+}

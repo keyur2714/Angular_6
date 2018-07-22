@@ -1,0 +1,34 @@
+{
+  "bookData": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "authorName": "Google",
+      "price": 500
+    },
+    {
+      "id": 2,
+      "name": "Java",
+      "authorName": "Oracle",
+      "price": 600
+    },
+    {
+      "id": 3,
+      "name": ".Net",
+      "authorName": "Microsoft",
+      "price": 700
+    },
+    {
+      "id": 5,
+      "name": "Big Data",
+      "authorName": "Hortonworks",
+      "price": 700
+    },
+    {
+      "id": 8,
+      "name": "Hindi",
+      "authorName": "RK",
+      "price": 400
+    }
+  ]
+}

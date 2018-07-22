@@ -1,0 +1,40 @@
+{
+  "bookDetails": [
+    {
+      "id": 1,
+      "name": "Java",
+      "author": "Murach",
+      "price": 700
+    },
+    {
+      "id": 2,
+      "name": "Servlet-Jsp",
+      "author": "Murach",
+      "price": "700"
+    },
+    {
+      "id": 3,
+      "name": "Angular",
+      "author": "Charly",
+      "price": "501"
+    },
+    {
+      "id": 4,
+      "name": "C",
+      "author": "Yashwant",
+      "price": "340"
+    },
+    {
+      "id": 5,
+      "name": "c++",
+      "author": "Yashwant",
+      "price": "350"
+    },
+    {
+      "id": 6,
+      "name": "Bigdata",
+      "author": "Jemms",
+      "price": "700"
+    }
+  ]
+}

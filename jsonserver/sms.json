@@ -1,0 +1,44 @@
+{
+  "studentDetails": [
+    {
+      "id": 27,
+      "name": "keyur",
+      "email": "keyurjava27@gmail.com",
+      "mobileNo": "7387029671",
+      "course": "Angular",
+      "fees": "12001"
+    },
+    {
+      "id": 26,
+      "name": "denish",
+      "email": "denishjava26@gmail.com",
+      "mobileNo": "7387029672",
+      "course": ".Net",
+      "fees": "10000"
+    },
+    {
+      "id": 44,
+      "name": "vinit",
+      "email": "vinitjava44@gmail.com",
+      "mobileNo": "7387029671",
+      "course": "Hadoop",
+      "fees": "19000"
+    },
+    {
+      "id": 4,
+      "name": "Ami",
+      "email": "dave.ashvini@gmail.com",
+      "mobileNo": "8600712124",
+      "course": "Angular",
+      "fees": "12000"
+    },
+    {
+      "id": 24,
+      "name": "darshana",
+      "email": "darsh_hy@gmail.com",
+      "mobileNo": "9898121212",
+      "course": "Angular",
+      "fees": "12000"
+    }
+  ]
+}

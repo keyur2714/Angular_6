@@ -1,0 +1,142 @@
+{
+  "departments": [
+    {
+      "deptName": "IT",
+      "id": 10
+    },
+    {
+      "deptName": "SALES",
+      "id": 20
+    },
+    {
+      "deptName": "HR5",
+      "id": 30
+    },
+    {
+      "deptName": "purchase",
+      "id": 31
+    },
+    {
+      "deptName": "ADMIN",
+      "id": 32
+    },
+    {
+      "deptName": "Test",
+      "id": 33
+    },
+    {
+      "deptName": "Engineering",
+      "id": 34
+    },
+    {
+      "deptName": "clerk",
+      "id": 35
+    },
+    {
+      "id": 11,
+      "deptName": "POSTMAN"
+    }
+  ],
+  "emp": [
+    {
+      "empId": 123,
+      "name": "keyur"
+    },
+    {
+      "empId": 122,
+      "name": "denish"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "code": "P101",
+      "name": "TV",
+      "description": "Philips LED TV",
+      "price": 25000
+    },
+    {
+      "id": 2,
+      "code": "P102",
+      "name": "Laptop",
+      "description": "Dell TV",
+      "price": 28000
+    },
+    {
+      "id": 3,
+      "code": "P103",
+      "name": "Mobile",
+      "description": "MI Mobile",
+      "price": 15000
+    },
+    {
+      "id": 4,
+      "name": "Bag",
+      "code": "P104",
+      "description": "HCL Bag",
+      "price": 300
+    },
+    {
+      "id": 5,
+      "name": "Mouse",
+      "code": "P105",
+      "description": "IBall",
+      "price": 400
+    },
+    {
+      "id": 6,
+      "name": "Bottle",
+      "code": "P106",
+      "description": "Test",
+      "price": 90
+    },
+    {
+      "id": 7,
+      "name": "Key",
+      "code": "P107",
+      "description": "Metal Keys",
+      "price": 200
+    },
+    {
+      "id": 8,
+      "name": "t",
+      "code": "t",
+      "description": "t",
+      "price": 8
+    },
+    {
+      "id": 9,
+      "name": "i",
+      "code": "i",
+      "description": "i",
+      "price": 88
+    },
+    {
+      "id": 10,
+      "name": "II",
+      "code": "II",
+      "description": "II",
+      "price": 8
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "Java 8",
+      "author": "Herbert",
+      "price": 700
+    },
+    {
+      "id": 2,
+      "name": "Hadoop Definative Guide",
+      "author": "Marshall",
+      "price": 800
+    },
+    {
+      "id": 3,
+      "name": "Angular 5",
+      "author": "Google",
+      "price": 600
+    }
+  ]
+}
