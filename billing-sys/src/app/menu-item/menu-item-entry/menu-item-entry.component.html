@@ -1,0 +1,42 @@
+<p>
+  {{msg}}
+</p>
+<form #frmMenuItem=ngForm (ngSubmit)="saveMenuItem()">
+  <div class="row form-group">
+    <div class="col-md-2">
+      <label>Menu Item Id</label>
+    </div>
+    <div class="col-md-4">
+      <input type=number class="form-control" name=id #id=ngModel [(ngModel)]="menuItem.id">
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-2">
+      <label>Menu Item Code</label>
+    </div>
+    <div class="col-md-4">
+      <input type=text class="form-control" name=code #code=ngModel [(ngModel)]="menuItem.code">
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-2">
+      <label>Menu Item Desc</label>
+    </div>
+    <div class="col-md-4">
+      <input type=text class="form-control" name=desc #desc=ngModel [(ngModel)]="menuItem.desc">
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-2">
+      <label>Menu Item Price</label>
+    </div>
+    <div class="col-md-4">
+      <input type=number class="form-control" name=unitPrice #unitPrice=ngModel [(ngModel)]="menuItem.unitPrice">
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-2">
+      <button class="btm btn-primary" type="submit">Save</button>
+    </div>    
+  </div>
+</form>
