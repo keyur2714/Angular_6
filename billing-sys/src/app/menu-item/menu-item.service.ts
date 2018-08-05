@@ -22,4 +22,16 @@ export class MenuItemService {
     saveMenuItem(menuItem:MenuItem):Observable<number>{
         return this.httpClient.post<number>(this.serviceUrl,menuItem);
     }
+
+    updateMenuItem(menuItem:MenuItem):Observable<number>{
+        return this.httpClient.put<number>(this.serviceUrl+"/"+menuItem.id,menuItem);
+    }
+
+    getMenuItemById(id:number):Observable<MenuItem>{
+        return this.httpClient.get<MenuItem>(this.serviceUrl+"/"+id);
+    }
+
+    deleteMenuItemById(id:number):Observable<number>{
+        return this.httpClient.delete<number>(this.serviceUrl+"/"+id);
+    }
 }

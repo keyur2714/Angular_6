@@ -16,7 +16,7 @@
       "id": 3,
       "code": "BM",
       "desc": "Butter Milk",
-      "unitPrice": 10
+      "unitPrice": 15
     },
     {
       "id": 4,
@@ -28,7 +28,7 @@
       "id": 5,
       "code": "COFFEE",
       "desc": "Coffee",
-      "unitPrice": 15
+      "unitPrice": 20
     }
   ],
   "orderDetails": [
