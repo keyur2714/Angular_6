@@ -1,0 +1,19 @@
+{{msg}}
+<table border="5">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Course</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let student of studentList">
+    <td>
+      <a [routerLink]="['/detail', student.id]">
+        {{student.id}}
+      </a>
+    </td>
+    <td>{{student.name}}</td>
+    <td>{{student.course}}</td>
+    <td><button (click)="edit(student.id)">Edit</button></td>  
+  </tr>
+</table>
