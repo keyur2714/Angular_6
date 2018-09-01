@@ -5,7 +5,11 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 const routes : Routes = [
     {
-        "path":"product-list",
+        "path":"",
+         component: HomeComponent
+    },
+    {
+        "path":"product",
          loadChildren: './admin/product/product.module#ProductModule'  
     },
     {

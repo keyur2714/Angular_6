@@ -1,4 +1,22 @@
-<p>
-  product-list works!
-</p>
-<a routerLink="/product-entry">New Product</a>
+<button class="btn btn-primary" (click)="newProduct()">New Product</button>
+<table class="table table-sptripped">
+  <tr>
+    <th>Code</th>
+    <th>Description</th>
+    <th>Unit Price</th>
+    <th>Action</th>    
+  </tr>
+  <tr *ngFor="let product of productList">
+    <td>
+      <a [routerLink]="['./product-detail',product.productId]" [queryParams]="{editable:true}">
+      {{product.code}}
+      </a>
+    </td>
+    <td>{{product.description}}</td>
+    <td>{{product.unitPrice}}</td>
+    <td><button class="btn btn-success" (click)="edit(product.productId)">Edit</button></td>
+  </tr>
+</table>
+<div class="row">
+  <router-outlet></router-outlet>
+</div>
