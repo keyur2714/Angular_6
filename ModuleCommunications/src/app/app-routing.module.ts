@@ -3,6 +3,8 @@ import { Routes,RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AuthGuard } from './auth/auth.guard';
+import { LoginComponent } from './login/login.component';
 const routes : Routes = [
     {
         "path":"",
@@ -10,15 +12,21 @@ const routes : Routes = [
     },
     {
         "path":"product",
-         loadChildren: './admin/product/product.module#ProductModule'  
+         loadChildren: './admin/product/product.module#ProductModule',
+         canActivate: [AuthGuard]         
     },
     {
         "path":"home",
         "component":HomeComponent
     },
     {
+        "path":"login",
+        "component":LoginComponent
+    },
+    {
         "path":"aboutus",
-        "component":AboutusComponent
+        "component":AboutusComponent,
+        canActivate: [AuthGuard]  
     },
     {
         "path":"contact-us",
