@@ -138,5 +138,28 @@
       "author": "Google",
       "price": 600
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "keyur",
+      "token": "Keyur###",
+      "password": "123",
+	  "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "denish",
+      "token": "Denish###",
+      "password": "123",
+	  "role": "USER"
+    },
+    {
+      "id": 3,
+      "username": "vinit",
+      "token": "Vinit###",
+      "password": "123",
+	  "role": "USER"
+    }
   ]
 }

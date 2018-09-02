@@ -1,36 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { Product } from './product.model';
+import { ProductService } from './product.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
-})
+  styleUrls: ['./product-list.component.css'],
+  providers: [ProductService]
+}) 
 export class ProductListComponent implements OnInit {
 
-  productList: Product[] = [
-    {
-      "productId" : 10,
-      "code": "C01",
-      "description": "Computer",
-      "unitPrice": 25000
-    },
-    {
-      "productId" : 20,
-      "code": "M01",
-      "description": "Mobile",
-      "unitPrice": 20000
-    },{
-      "productId" : 30,
-      "code": "L01",
-      "description": "Laptop",
-      "unitPrice": 35000
-    }
-  ];
+  productList: Product[] = [];
 
-  constructor(private router:ActivatedRoute,private route: Router) { }
+  constructor(private router:ActivatedRoute,private route: Router,private productService: ProductService) { }
 
   ngOnInit() {
+    this.productService.getProductList().subscribe(
+      (data)=>{
+        this.productList = data;
+      }
+    )
   }
 
   newProduct(){

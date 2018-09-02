@@ -2,19 +2,21 @@
 <table class="table table-sptripped">
   <tr>
     <th>Code</th>
+    <th>Name</th>
     <th>Description</th>
     <th>Unit Price</th>
     <th>Action</th>    
   </tr>
   <tr *ngFor="let product of productList">
     <td>
-      <a [routerLink]="['./product-detail',product.productId]" [queryParams]="{editable:true}">
+      <a [routerLink]="['./product-detail',product.id]" [queryParams]="{editable:true}">
       {{product.code}}
       </a>
     </td>
+    <td>{{product.name}}</td>
     <td>{{product.description}}</td>
-    <td>{{product.unitPrice}}</td>
-    <td><button class="btn btn-success" (click)="edit(product.productId)">Edit</button></td>
+    <td>{{product.price}}</td>
+    <td><button class="btn btn-success" (click)="edit(product.id)">Edit</button></td>
   </tr>
 </table>
 <div class="row">

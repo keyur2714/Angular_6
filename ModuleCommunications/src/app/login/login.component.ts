@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   login(username,password){
     this.isValidUser = this.authenticationService.authenticate(username,password);
-    if(this.isValidUser){
+    console.log("========"+this.isValidUser);
+    if(this.isValidUser){    
       this.router.navigate([this.authenticationService.getUrl()]);
     }else{
       this.router.navigate(['/login']);
