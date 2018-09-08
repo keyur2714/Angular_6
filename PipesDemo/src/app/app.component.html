@@ -1,0 +1,30 @@
+<h1>{{title | lowercase | uppercase}}</h1>
+<h1>{{title | lowercase }}</h1>
+{{today | date : 'dd-MMM-yyyy'}}
+<p>
+  {{today | date : 'dd/MMM/yy hh:mm:ss a'}}
+</p>
+<pre>
+{{employee1 | json}}
+</pre>
+<h1>
+{{employee1.name | welcome : employee1.gender}}
+</h1>
+<h1>
+{{employee2.name | welcome: employee2.gender}}
+</h1>
+<h2>
+  {{employee1.accountNo | mask : 5}}
+</h2>
+<h2>
+  {{employee1.accountNo | mask : 3}}
+</h2>
+
+<p>
+  {{employee1.mobileNo | repeate : 3}}
+</p>
+
+<span [class]="employee1.status | statusConvert">Active</span>
+<hr/>
+<span [class]="employee2.status | statusConvert">De Active</span>  
+
