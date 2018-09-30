@@ -1,0 +1,20 @@
+<h1>
+  {{title}}
+</h1>
+
+<button (click)="toggleState()">Toggle State</button>
+<button (click)="start()">Start</button>
+<button (click)="inProgress()">In Progress</button>
+<button (click)="stop()">Stop</button>
+
+<div style="width:100px ;height: 100px;" [@stateChange]="state">
+</div>
+
+<table border=5 align="center">
+    <tr>
+      <th>Names</th>
+    </tr>
+    <tr *ngFor="let name of friendsName" [@onOff2Trigger]="onOffState" (click)="toggleRowState()">
+      <td>{{name}}</td>
+    </tr>
+</table>
