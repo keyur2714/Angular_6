@@ -26,4 +26,8 @@ export class AppComponent {
     accountNo: "234500011",
     status: "InActive"
   };
+
+  add(num1,num2):number{
+    return num1 + num2;
+  }
 }
